@@ -5,10 +5,10 @@ import taskRouter from "./routes/taskRouter.js";
 import authRouter from "./routes/authRouter.js";
 import errorHandler from "./middleware/errorMiddleware.js";
 
-connectDB();
-
 const app = express();
 app.use(express.json());
+
+connectDB();
 
 // Routes
 app.use("/api/tasks", taskRouter);
